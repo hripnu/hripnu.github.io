@@ -1,0 +1,64 @@
+# Site settings. After changing this file, the live site updates in about a minute.
+
+title: HRI Lab
+tagline: Human-Robot Interaction Lab
+description: >-
+  Human-Robot Interaction Lab (HRI Lab) at the School of Mechanical Engineering,
+  Pusan National University: robotic skin and tactile sensors, physical
+  human-robot interaction, and bio-signal-based human-robot interfaces.
+url: "https://hripnu.github.io"
+baseurl: ""
+lang: en
+
+lab:
+  school: School of Mechanical Engineering
+  university: Pusan National University
+  email: mjyang@pusan.ac.kr
+  phone: "+82 51-510-2464"
+
+# Names shown in bold in author lists (add lab members here).
+highlight_authors:
+  - Min Jin Yang
+
+# How many of the latest news entries the Home page shows
+# (Board > News lists all of them).
+news_on_home: 5
+
+# Top navigation, in order. An item with `sub` gets a drop-down menu, and
+# its pages show the sub-items as tabs.
+nav:
+  - title: Home
+    url: /
+  - title: Team
+    url: /team/
+  - title: Research
+    url: /research/
+  - title: Publication
+    url: /publication/
+  - title: Board
+    url: /board/news/
+    sub:
+      - title: News
+        url: /board/news/
+      - title: Video
+        url: /board/video/
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      image: /assets/img/og-image.jpg
+
+kramdown:
+  input: GFM
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

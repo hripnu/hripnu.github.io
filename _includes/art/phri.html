@@ -1,0 +1,66 @@
+<svg class="art" viewBox="0 0 260 200" data-anim="phri" data-state="work" aria-hidden="true" focusable="false">
+  <g class="fade" style="--d:.5s">
+    <g class="status">
+      <rect class="status-box" x="10" y="12" width="66" height="18" rx="9"/>
+      <path class="status-icon" d="M18 21a3 3 0 1 0 6 0a3 3 0 1 0-6 0Z"/>
+      <text class="label status-v" x="29" y="23.5">WORKING</text>
+    </g>
+  </g>
+  <g class="draw">
+    <path class="k" pathLength="1" d="M10 190H250"/>
+    <path class="k solid" pathLength="1" d="M26 190V172a5 5 0 0 1 5-5H61a5 5 0 0 1 5 5V190"/>
+    <path class="k" pathLength="1" d="M26 179H66"/>
+    <path class="k solid" pathLength="1" d="M172 170H236V174H172Z"/>
+    <path class="k" pathLength="1" d="M178 174V190M230 174V190"/>
+  </g>
+  <circle class="base-led" cx="57" cy="184.5" r="2.4"/>
+  <g class="cup-g">
+    <g class="fade" style="--d:.5s">
+      <path class="water" d="M185.9 140H198.1L197.5 156H186.5Z"/>
+      <path class="cup" d="M185.5 132L186.5 156H197.5L198.5 132"/>
+    </g>
+  </g>
+  <g class="arm">
+    <g class="draw" transform="translate(46 154) rotate(-58.24)">
+      <path class="k solid" pathLength="1" d="M0 -11H99V11H0Z"/>
+      <path class="sheen" pathLength="1" d="M16 -5.5H84"/>
+    </g>
+    <g class="lower">
+      <g class="fore" transform="translate(98 70) rotate(10.84)">
+        <g class="draw">
+          <path class="k solid" pathLength="1" d="M0 -9.5H96V9.5H0Z"/>
+        </g>
+        <g class="fade" style="--d:.4s">
+          <path class="sleeve" d="M34 -16H70Q80 -16 80 -6V6Q80 16 70 16H34Q24 16 24 6V-6Q24 -16 34 -16Z"/>
+          <path class="sleeve-line" d="M31 -11.5H73"/>
+          <g class="taxels">
+            {%- for r in (0..2) %}{% for c in (0..9) %}
+            <circle class="taxel" cx="{{ c | times: 5.2 | plus: 28.6 }}" cy="{{ r | times: 8 | minus: 8 }}" r="1.1"/>
+            {%- endfor %}{% endfor %}
+          </g>
+        </g>
+      </g>
+      <g class="wrist">
+        <g class="draw">
+          <path class="k solid" pathLength="1" d="M185 88V114H199V88"/>
+          <path class="k solid" pathLength="1" d="M181 88a11 11 0 1 0 22 0a11 11 0 1 0-22 0"/>
+          <path class="k cap" pathLength="1" d="M186 88a6 6 0 1 0 12 0a6 6 0 1 0-12 0"/>
+          <path class="k solid" pathLength="1" d="M183 114a9 9 0 1 0 18 0a9 9 0 1 0-18 0"/>
+          <path class="k cap" pathLength="1" d="M187.5 114a4.5 4.5 0 1 0 9 0a4.5 4.5 0 1 0-9 0"/>
+          <path class="k solid finger" pathLength="1" d="M181 129H185.5V144H181Z"/>
+          <path class="k solid finger" pathLength="1" d="M198.5 129H203V144H198.5Z"/>
+          <path class="k solid" pathLength="1" d="M180 123H204V129H180Z"/>
+        </g>
+      </g>
+      <g class="draw">
+        <path class="k solid" pathLength="1" d="M84 70a14 14 0 1 0 28 0a14 14 0 1 0-28 0"/>
+        <path class="k cap" pathLength="1" d="M89.5 70a8.5 8.5 0 1 0 17 0a8.5 8.5 0 1 0-17 0"/>
+      </g>
+    </g>
+    <g class="draw">
+      <path class="k solid" pathLength="1" d="M31 154a15 15 0 1 0 30 0a15 15 0 1 0-30 0"/>
+      <path class="k cap" pathLength="1" d="M37 154a9 9 0 1 0 18 0a9 9 0 1 0-18 0"/>
+    </g>
+  </g>
+  <g class="hand fade" style="--d:.2s">{% include art/hand.html fade=true %}</g>
+</svg>

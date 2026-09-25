@@ -1,0 +1,26 @@
+---
+title: Video
+permalink: /board/video/
+description: "Research videos and press coverage from the HRI Lab, Pusan National University."
+---
+{% include page-head.html heading="Board" tabs="Board" %}
+<section class="section section-first">
+  <div class="wrap">
+    <div class="video-grid">
+      {%- for video in site.data.videos %}
+      <article class="video-card">
+        <button class="video-thumb" type="button" data-yt="{{ video.youtube }}" aria-label="Play video: {{ video.title }}">
+          <img src="https://i.ytimg.com/vi/{{ video.youtube }}/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">
+          <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8.5 5.8v12.4L18.6 12z"/></svg></span>
+        </button>
+        <div class="video-body">
+          <span class="tag">{{ video.tag }}</span>
+          <h2 class="video-title"{% if video.lang %} lang="{{ video.lang }}"{% endif %}>{{ video.title }}</h2>
+          {%- if video.note %}<p class="video-note">{{ video.note }}</p>{% endif %}
+          <a class="video-link" href="https://youtu.be/{{ video.youtube }}">Watch on YouTube <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

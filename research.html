@@ -1,0 +1,39 @@
+---
+title: Research
+permalink: /research/
+description: "Research projects of the HRI Lab: robotic skin and tactile sensors, physical human-robot interaction, and surface EMG interfaces."
+---
+{% include page-head.html %}
+{%- assign all_pubs = site.data.publications.journal | concat: site.data.publications.conference -%}
+<section class="section section-first">
+  <div class="wrap">
+    {%- for project in site.data.research %}
+    <article class="project" id="{{ project.anchor }}">
+      <a class="project-media" href="{{ project.image | relative_url }}" target="_blank" rel="noopener" title="Open the full-size figure">
+        <img src="{{ project.image | relative_url }}" alt="{{ project.alt }}" loading="lazy">
+      </a>
+      <div class="project-body">
+        <h2 class="project-title">{{ project.title }}</h2>
+        <p class="project-period">{{ project.period }}</p>
+        <ul class="project-points">
+          {%- for point in project.points %}
+          <li>{{ point | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
+          {%- endfor %}
+        </ul>
+        {%- if project.papers %}
+        <div class="project-links">
+          <p class="links-row"><span class="links-label">Related publications</span>
+            {%- for id in project.papers %}
+            {%- assign pub = all_pubs | where: "id", id | first %}
+            {%- if pub %}
+            <a class="chip" href="{% if pub.doi %}https://doi.org/{{ pub.doi }}{% else %}{{ '/publication/' | relative_url }}#{{ pub.id | downcase }}{% endif %}">{{ pub.badge }} {{ pub.year }}</a>
+            {%- endif %}
+            {%- endfor %}
+          </p>
+        </div>
+        {%- endif %}
+      </div>
+    </article>
+    {%- endfor %}
+  </div>
+</section>

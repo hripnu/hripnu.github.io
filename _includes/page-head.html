@@ -1,0 +1,19 @@
+{%- comment -%}
+  Page title band. Options:
+    heading="..."  text shown instead of the page title
+    tabs="Board"   shows that menu item's sub-pages as tabs (see nav in _config.yml)
+{%- endcomment -%}
+{%- if include.tabs %}{% assign group = site.nav | where: "title", include.tabs | first %}{% endif %}
+<section class="page-head{% if group %} has-tabs{% endif %}">
+  <div class="wrap">
+    {%- if include.kicker %}<p class="kicker">{{ include.kicker }}</p>{% endif %}
+    <h1 class="page-title">{{ include.heading | default: page.title }}</h1>
+    {%- if group %}
+    <nav class="tabs" aria-label="{{ group.title }}">
+      {%- for sub in group.sub %}
+      <a href="{{ sub.url | relative_url }}"{% if page.url == sub.url %} aria-current="page"{% endif %}>{{ sub.title }}</a>
+      {%- endfor %}
+    </nav>
+    {%- endif %}
+  </div>
+</section>

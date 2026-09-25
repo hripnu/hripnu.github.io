@@ -1,0 +1,6 @@
+{%- comment -%} Keeps hyphenated words such as "Human-Robot" on one line. {%- endcomment -%}
+{%- assign words = include.text | split: ' ' -%}
+{%- for word in words -%}
+{%- if word contains '-' -%}<span class="nowrap">{{ word | escape }}</span>{%- else -%}{{ word | escape }}{%- endif -%}
+{%- unless forloop.last %}{{ ' ' }}{% endunless -%}
+{%- endfor -%}

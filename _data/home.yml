@@ -1,0 +1,57 @@
+# Home page text. The animated intro at the top of the Home page is built from
+# this file, so wording only needs to be changed here.
+
+site_name: "HRI Lab @ PNU"
+welcome: "Welcome to Human-Robot Interaction Lab"
+# Shown under the welcome line, one line each.
+subtitle:
+  - "School of Mechanical Engineering"
+  - "Pusan National University (PNU)"
+
+# Seconds each intro scene stays on screen (a research area can set its own).
+intro_seconds: 7
+title_seconds: 8
+
+# Research areas: each one is a scene of the intro.
+#   short: label in the intro's chapter bar
+#   text:  the grey description, one entry per line (two lines fit best)
+#   art:   drawing used for the scene (skin, phri, or biosignal)
+#   steps: states the animation walks through, shown under the text
+#   sequence: true shows the steps as an ordered sequence (with arrows)
+areas:
+  - name: "Robotic Skin & Tactile Sensor"
+    short: "Robotic Skin"
+    text:
+      - "Design, development, signal processing,"
+      - "and AI for robotic tactile perception"
+    art: skin
+    seconds: 8
+
+  - name: "Physical Human-Robot Interaction"
+    short: "Physical HRI"
+    text:
+      - "Whole-body robotic skin and tactile AI"
+      - "for contact-rich and intuitive pHRI"
+    art: phri
+    seconds: 12
+    steps: ["Hit", "Stroke", "Scratch", "Press"]
+
+  - name: "Bio-signal-based Human-Robot Interface"
+    short: "Bio-signal"
+    text:
+      - "Bio-signal-based robotic systems for"
+      - "human rehabilitation or enhancement"
+    art: biosignal
+    seconds: 9
+    steps: ["Rest", "Grasp intention", "Muscle activity"]
+    sequence: true
+
+recruit:
+  headline: "We are looking for highly motivated students!"
+  # One entry per line in the intro; the Team page shows them as one sentence.
+  text:
+    - "Please send an email to mjyang@pusan.ac.kr"
+    - "with your CV"
+
+# Shown in the News section while _data/news.yml is empty.
+news_empty: "News from the lab will be posted here."

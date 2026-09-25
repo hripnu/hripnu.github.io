@@ -1,0 +1,28 @@
+---
+scripts:
+  - /assets/js/intro.js
+---
+{% include intro.html %}
+
+<section class="section">
+  <div class="wrap">
+    {%- assign has_news = false %}
+    {%- if site.data.news and site.data.news.size > 0 %}{% assign has_news = true %}{% endif %}
+    <div class="section-head">
+      <h2 class="section-title">News</h2>
+      {%- if has_news %}
+      <a class="more-link" href="{{ '/board/news/' | relative_url }}">All news <span aria-hidden="true">&rarr;</span></a>
+      {%- endif %}
+    </div>
+    {%- if has_news %}
+    {%- assign shown = site.news_on_home | default: 5 %}
+    <ul class="news-list">
+      {%- for item in site.data.news limit: shown %}
+      {%- include news-item.html item=item %}
+      {%- endfor %}
+    </ul>
+    {%- else %}
+    <p class="news-empty">{{ site.data.home.news_empty }}</p>
+    {%- endif %}
+  </div>
+</section>

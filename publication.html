@@ -1,0 +1,51 @@
+---
+title: Publication
+permalink: /publication/
+description: "Journal papers, conference papers, and patents from the HRI Lab, Pusan National University."
+---
+{% include page-head.html %}
+{%- assign pubs = site.data.publications -%}
+<section class="section section-first">
+  <div class="wrap">
+    <nav class="pub-jump" aria-label="Publication types">
+      <a href="#journal">Journal <span>{{ pubs.journal.size }}</span></a>
+      <a href="#conference">Conference <span>{{ pubs.conference.size }}</span></a>
+      <a href="#patent">Patent <span>{{ pubs.patent.size }}</span></a>
+    </nav>
+
+    <h2 class="pub-heading" id="journal">Journal</h2>
+    <ol class="pub-list">
+      {%- for pub in pubs.journal %}
+      {% include pub-item.html pub=pub %}
+      {%- endfor %}
+    </ol>
+
+    <h2 class="pub-heading" id="conference">Conference</h2>
+    <ol class="pub-list">
+      {%- for pub in pubs.conference %}
+      {% include pub-item.html pub=pub %}
+      {%- endfor %}
+    </ol>
+
+    <h2 class="pub-heading" id="patent">Patent</h2>
+    <ol class="pub-list">
+      {%- for pat in pubs.patent %}
+      <li class="pub" id="{{ pat.id | downcase }}">
+        <span class="pub-id">{{ pat.id }}</span>
+        <div class="pub-body">
+          <h3 class="pub-title">{{ pat.title }}</h3>
+          <p class="pub-authors">Inventors: {% include authors.html names=pat.inventors %}</p>
+          <table class="patent-table">
+            <thead><tr><th scope="col">Country</th><th scope="col">Patent No.</th><th scope="col">Date</th></tr></thead>
+            <tbody>
+              {%- for reg in pat.registrations %}
+              <tr><td><span class="tag">{{ reg.country }}</span></td><td>{{ reg.number }}</td><td>{{ reg.date }}</td></tr>
+              {%- endfor %}
+            </tbody>
+          </table>
+        </div>
+      </li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>

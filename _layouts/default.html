@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.documentElement.className = 'js';</script>
+  {% seo %}
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="{{ '/assets/fonts/pretendard/pretendardvariable-dynamic-subset.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  {% include header.html %}
+  <main id="main">
+    {{ content }}
+  </main>
+  {% include footer.html %}
+  <script src="{{ '/assets/js/site.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+  {% for script in page.scripts %}
+  <script src="{{ script | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+  {% endfor %}
+</body>
+</html>

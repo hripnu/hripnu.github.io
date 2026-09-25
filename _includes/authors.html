@@ -1,0 +1,6 @@
+{%- assign names = include.names -%}
+{%- for person in site.highlight_authors -%}
+  {%- capture strong_name -%}<strong>{{ person }}</strong>{%- endcapture -%}
+  {%- assign names = names | replace: person, strong_name -%}
+{%- endfor -%}
+{{- names -}}

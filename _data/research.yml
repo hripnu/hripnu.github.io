@@ -1,0 +1,53 @@
+# Research projects, newest first.
+#   points: bullet points; wrap words in **double asterisks** to highlight them
+#   papers: ids from _data/publications.yml (shown as links to the papers)
+#   anchor: the project's address on the page, e.g. /research/#fabric-skin
+
+- anchor: fabric-skin
+  title: "Fabric-based robotic skin using multimodal sensing modules"
+  period: "Jul. 2022 – Jan. 2024"
+  image: /assets/img/research/fabric-skin.webp
+  alt: "Body-scale robotic skin on a robot arm, with an exploded view of the multilayered fabric and the multimodal sensing module (capsule, vented screw, microphone)"
+  points:
+    - "A robotic skin designed with multimodal sensing modules (MSMs) and multilayered fabric to have **two complementary transducing mechanisms**."
+    - "The complementary sensibilities **improve classifying 10 touch types.**"
+    - "The MSM integrates two types of transducer and can be easily made on rigid surfaces with its vented screw, simplifying a fabrication."
+    - "The multilayered fabric is light and flexible to easily conform on three-dimensional surfaces."
+    - "The skin fabricated on a robotic arm to **demonstrate physical human-robot interaction** by reacting differently to various touches."
+  papers: [C4, J4]
+
+- anchor: repairable-skin
+  title: "Repairable biomimetic elastomeric robotic skin"
+  period: "Mar. 2021 – Jun. 2022"
+  image: /assets/img/research/biomimetic-skin.webp
+  alt: "Biomimetic robotic skin compared with human skin layers, its pressure and vibration sensing principle, large curved skin, and repair after damage"
+  points:
+    - "A skin-inspired multi-layer structure is fabricated with silicone elastomer and **ionic hydrogel to transmit alternating electric currents and vibrations** in response to touch."
+    - "Tomographic imaging methods are utilised to **reconstruct a multi-modal tactile image** from measurement data."
+    - "The skin **can be repaired even after severe damage**, such as an incision, using chitosan topohesive and silicone adhesive."
+    - "A sensorised prosthesis is made as a proof-of-concept."
+  papers: [J2]
+
+- anchor: microphone-skin
+  title: "Robotic skin using microphones for dynamic touch perception and touch classification"
+  period: "Jan. 2019 – Nov. 2022"
+  image: /assets/img/research/microphone-skin.webp
+  alt: "Robotic skin with embedded microphones on a UR5e robot arm reacting to a pat, and a large cylindrical skin localising and classifying a scratch"
+  points:
+    - "Microphones are sparsely distributed beneath a textured fabric to collect vibrations elicited by a dynamic touch."
+    - "Collected vibrations are processed with an analytical decay model to **localise a touch and achieve a super-resolution.**"
+    - "Spatiotemporal properties of signals are analysed with **CNN to classify touch types** (pat, rub, etc.)."
+    - "The skin is made on a large cylindrical surface and robotic arm to **demonstrate scalability and physical human-robot interaction application.**"
+  papers: [C2, J3]
+
+- anchor: semg
+  title: "Intention and environment recognition using surface electromyography (sEMG)"
+  period: "Mar. 2018 – Dec. 2021"
+  image: /assets/img/research/semg.webp
+  alt: "32-channel EMG electrodes on the hand and forearm, sEMG sensors on a lower-limb exoskeleton, signal-processing steps, and a classification plot"
+  points:
+    - "sEMG is used for various **recognition tasks in human-machine interfaces** by its early detection compared to physical sensors."
+    - "Different forms of sEMG and signal processing methods are implemented depending on the subject and target application."
+    - "For **assistance in a healthy subject**, single-channel electrodes are attached to multiple muscles to recognise gait environment and motion intention."
+    - "For hand **motion rehabilitation in stroke patients**, high-density electrodes are used to detect an intention in binary classes from poor signal quality."
+  papers: [J1, C3, C6]

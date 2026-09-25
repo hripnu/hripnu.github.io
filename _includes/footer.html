@@ -1,0 +1,13 @@
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p class="footer-brand">{{ site.title }}<span>{{ site.tagline }}</span></p>
+      <p class="footer-meta">{{ site.lab.school }}, {{ site.lab.university }}</p>
+    </div>
+    <ul class="footer-contact">
+      <li><span>Email</span><a href="mailto:{{ site.lab.email }}">{{ site.lab.email }}</a></li>
+      <li><span>Tel</span><a href="tel:{{ site.lab.phone | remove: ' ' | remove: '-' }}">{{ site.lab.phone }}</a></li>
+    </ul>
+  </div>
+  <div class="wrap footer-bottom">© {{ site.time | date: '%Y' }} {{ site.tagline }}, {{ site.lab.university }}</div>
+</footer>

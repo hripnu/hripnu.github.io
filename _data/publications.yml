@@ -1,0 +1,142 @@
+# Publications, newest first within each list.
+# To add a paper: copy an entry, paste it at the top of its list, and edit it.
+#   id:      J = journal, C = conference, P = patent (next number up)
+#   badge:   short venue name, used on the Research and Video pages
+#   award:   optional, shown as a small tag
+#   note:    optional line under the authors
+#   doi:     without "https://doi.org/"
+#   video:   optional YouTube video id
+# Names listed under `highlight_authors` in _config.yml appear in bold.
+
+journal:
+  - id: J4
+    title: "A Body-scale Robotic Skin using Distributed Multimodal Sensing Modules: Design, Evaluation, and Application"
+    authors: "Min Jin Yang, Hyunjo Chung, Yoonjin Kim, Kyungseo Park, and Jung Kim"
+    venue: "IEEE Transactions on Robotics"
+    details: "41 (2025)"
+    badge: "T-RO"
+    year: 2025
+    doi: "10.1109/TRO.2024.3502204"
+    video: T-SNP4POUMI
+
+  - id: J3
+    title: "Robotic Skin Mimicking Human Skin Layer and Pacinian Corpuscle for Social Interaction"
+    authors: "Min Jin Yang, Kyungseo Park, Won Dong Kim, and Jung Kim"
+    venue: "IEEE/ASME Transactions on Mechatronics"
+    details: "29.4 (2024)"
+    badge: "T-MECH"
+    year: 2024
+    doi: "10.1109/TMECH.2023.3337412"
+
+  - id: J2
+    title: "A biomimetic elastomeric robot skin using electrical impedance and acoustic tomography for tactile sensing"
+    authors: "Kyungseo Park, Hyunwoo Yuk, Min Jin Yang, Junhwi Cho, Hyosang Lee, and Jung Kim"
+    venue: "Science Robotics"
+    details: "7.67 (2022)"
+    badge: "Sci. Robot."
+    year: 2022
+    doi: "10.1126/scirobotics.abm7187"
+    video: duIhxFcW0n4
+
+  - id: J1
+    title: "Recognition of walking environments and gait period by surface electromyography"
+    authors: "Seulki Kyeong, Wonseok Shin, Min Jin Yang, Ung Heo, Ji-rou Feng, and Jung Kim"
+    venue: "Frontiers of Information Technology & Electronic Engineering"
+    details: "20.3 (2019)"
+    badge: "FITEE"
+    year: 2019
+    doi: "10.1631/FITEE.1800601"
+
+conference:
+  - id: C7
+    title: "Analysis on dynamic touch localisation algorithms in robotic skins using sparsely embedded microphones"
+    authors: "Min Jin Yang and Jung Kim"
+    venue: "ICROS 2024"
+    details: "Daejeon, South Korea"
+    badge: "ICROS"
+    year: 2024
+    award: "Best Paper Award"
+
+  - id: C6
+    title: "Hand Grasp Motion Intention Recognition Based on High-Density Electromyography in Chronic Stroke Patients"
+    authors: "Feng Jirou*, Min Jin Yang*, Seulki Kyeong, Yusung Kim, SeongHyeon Jo, Hyung-Soon Park, and Jung Kim"
+    note: "* Equally contributed"
+    venue: "EMBC 2023"
+    details: "Sydney, Australia"
+    badge: "EMBC"
+    year: 2023
+    doi: "10.1109/EMBC40787.2023.10340346"
+
+  - id: C5
+    title: "Preliminary Study of Portable Vibrotactile and Electrical Stimulation System for Knee Proprioception Enhancement"
+    authors: "Sungbin Park, Seojung Min, Junhwan Choi, Min Jin Yang, Dayoung Yeom, Wonseok Shin, Chaeree Park, and Jung Kim"
+    venue: "UR 2023"
+    details: "Honolulu, USA"
+    badge: "UR"
+    year: 2023
+    doi: "10.1109/UR57808.2023.10202396"
+
+  - id: C4
+    title: "Touch Classification on Robotic Skin using Multimodal Tactile Sensing Modules"
+    authors: "Min Jin Yang, Junhwi Cho, Hyunjo Chung, Kyungseo Park, and Jung Kim"
+    venue: "ICRA 2023"
+    details: "London, United Kingdom"
+    badge: "ICRA"
+    year: 2023
+    doi: "10.1109/ICRA48891.2023.10160400"
+    video: O50ccjHX6R8
+
+  - id: C3
+    title: "EEG-EMG hybrid real-time classification of hand grasp and release movements intention in chronic stroke patients"
+    authors: "SeongHyeon Jo, Jun Ha Jung, Min Jin Yang, Yechan Lee, Sang Jin Jang, Jirou Feng, Si-Hwan Heo, Jung Kim, Joon-Ho Shin, Jaeseung Jeong, and Hyung-Soon Park"
+    venue: "ICORR 2022"
+    details: "Rotterdam, Netherlands"
+    badge: "ICORR"
+    year: 2022
+    doi: "10.1109/ICORR55369.2022.9896592"
+
+  - id: C2
+    title: "A Large Area Robotic Skin with Sparsely Embedded Microphones for Human-Robot Tactile Communication"
+    authors: "Min Jin Yang, Kyungseo Park, and Jung Kim"
+    venue: "ICRA 2021"
+    details: "Xi'an, China"
+    badge: "ICRA"
+    year: 2021
+    doi: "10.1109/ICRA48506.2021.9561898"
+    video: 0BDhlPUG3mA
+
+  - id: C1
+    title: "Comparison of reliability between the force sensitivity resistor and the rigid optoelectronic based force sensor during level ground walking"
+    authors: "Junghoon Park, Min Jin Yang, Hyunkyu Park, Sangjoon Kim, Jung Kim, and Gwangmin Gu"
+    venue: "ICROS 2016"
+    details: "Seoul, South Korea"
+    badge: "ICROS"
+    year: 2016
+    award: "Outstanding Paper Award"
+
+# Patents: one entry per invention, with its registrations by country.
+patent:
+  - id: P2
+    title: "Biomimetic tactile sensor, robotic skin comprising the same and preparation method thereof"
+    inventors: "Jung Kim, Kyungseo Park, Min Jin Yang, and Junhwi Cho"
+    registrations:
+      - country: KR
+        number: "10-2614186"
+        date: "Dec. 12, 2023"
+      - country: US
+        number: "12,496,730"
+        date: "Dec. 16, 2025"
+
+  - id: P1
+    title: "Tactile sensor, and tactile stimulation sensing method using the same, and robot skin and robot comprising the same"
+    inventors: "Jung Kim and Min Jin Yang"
+    registrations:
+      - country: KR
+        number: "10-2443421"
+        date: "Sep. 08, 2022"
+      - country: JP
+        number: "7374188"
+        date: "Oct. 26, 2023"
+      - country: US
+        number: "12,017,343"
+        date: "Jun. 25, 2024"

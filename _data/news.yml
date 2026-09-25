@@ -1,0 +1,16 @@
+# News, newest first. While this file has no entries, the Home page shows the
+# `news_empty` sentence from _data/home.yml instead.
+#
+# To add news, paste an entry like this below these comments (no "#" in front):
+#
+# - date: 2026-10-01
+#   text: "Welcome, Gildong Hong, our first M.S. student!"
+#
+# date: use the full YYYY-MM-DD form (the site shows it as YYYY.MM)
+# text: plain text; **bold**, *italic*, and [links](https://...) also work
+
+# SAMPLE entries (placeholders showing how news looks): edit or delete them.
+- date: 2026-09-01
+  text: "We are looking for highly motivated students! Please send your CV to [mjyang@pusan.ac.kr](mailto:mjyang@pusan.ac.kr)."
+- date: 2026-03-01
+  text: "The HRI Lab opens at the School of Mechanical Engineering, Pusan National University."

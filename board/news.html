@@ -1,0 +1,19 @@
+---
+title: News
+permalink: /board/news/
+description: "News from the Human-Robot Interaction Lab (HRI Lab), Pusan National University."
+---
+{% include page-head.html heading="Board" tabs="Board" %}
+<section class="section section-first">
+  <div class="wrap">
+    {%- if site.data.news and site.data.news.size > 0 %}
+    <ul class="news-list">
+      {%- for item in site.data.news %}
+      {%- include news-item.html item=item %}
+      {%- endfor %}
+    </ul>
+    {%- else %}
+    <p class="news-empty">{{ site.data.home.news_empty }}</p>
+    {%- endif %}
+  </div>
+</section>

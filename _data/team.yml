@@ -1,0 +1,50 @@
+# Team page.
+
+pi:
+  name: "Min Jin Yang"
+  name_ko: "양민진"
+  title: "Assistant Professor, Ph.D."
+  photo: /assets/img/team/min-jin-yang.webp
+  email: mjyang@pusan.ac.kr
+  phone: "+82 51-510-2464"
+  # `place` may contain [links](https://...).
+  career:
+    - role: "Assistant Professor"
+      place: "School of Mechanical Engineering, Pusan National University"
+      period: "Mar. 2026 – Present"
+    - role: "Postdoctoral Fellow"
+      place: "[Lu Research Group](https://sites.utexas.edu/nanshulu/), University of Texas at Austin"
+      period: "Apr. 2025 – Feb. 2026"
+    - role: "Ph.D. in Mechanical Engineering"
+      place: "KAIST (Advisor: [Prof. Jung Kim](https://biorobotics.kaist.ac.kr/))"
+      period: "Mar. 2020 – Feb. 2025"
+    - role: "M.S. in Mechanical Engineering"
+      place: "KAIST (Advisor: [Prof. Jung Kim](https://biorobotics.kaist.ac.kr/))"
+      period: "Mar. 2018 – Feb. 2020"
+    - role: "B.S. in Mechanical Engineering"
+      place: "KAIST"
+      period: "Mar. 2013 – Feb. 2018"
+
+# Lab members. They share one grid of cards, in the order below, and each card
+# shows the person's role under the name. A role with no people is skipped,
+# and the "Waiting for YOU" card always ends the grid.
+# To add someone, put them under `people`, for example:
+#     people:
+#       - name: "Gildong Hong"
+#         photo: /assets/img/team/gildong-hong.webp   # optional
+#         email: "gildong@pusan.ac.kr"                  # optional
+members:
+  - role: "Ph.D. Student"
+    people: []
+  - role: "M.S. Student"
+    people: []
+  - role: "Undergraduate Researcher"
+    people: []
+
+# Former members, e.g.  - name: "..."  note: "M.S. 2028, now at ..."
+alumni: []
+
+# The last card of the grid: a place for future members.
+open_card:
+  title: "Waiting for YOU"
+  note: "Send your CV to"     # the lab email is shown below it

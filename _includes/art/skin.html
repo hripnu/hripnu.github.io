@@ -1,0 +1,39 @@
+<svg class="art" viewBox="0 0 260 200" data-anim="skin" aria-hidden="true" focusable="false">
+  <defs><clipPath id="clip-skin"><rect x="29" y="50" width="202" height="42"/></clipPath></defs>
+  <path class="layer" d="M28 92V62H232V92Z"/>
+  <g clip-path="url(#clip-skin)">
+    <ellipse class="glow press-glow" cx="130" cy="74" rx="17" ry="7" opacity="0"/>
+    <g class="currents">
+      <path class="current" d=""/>
+      <path class="current" d=""/>
+      <path class="current" d=""/>
+    </g>
+    <g class="waves">
+      <circle class="wave" cx="130" cy="62" r="0" opacity="0"/>
+      <circle class="wave" cx="130" cy="62" r="0" opacity="0"/>
+      <circle class="wave" cx="130" cy="62" r="0" opacity="0"/>
+      <circle class="wave" cx="130" cy="62" r="0" opacity="0"/>
+      <circle class="wave" cx="130" cy="62" r="0" opacity="0"/>
+      <circle class="wave" cx="130" cy="62" r="0" opacity="0"/>
+    </g>
+  </g>
+  <circle class="glow mic-glow" cx="76" cy="112" r="10" opacity="0"/>
+  <circle class="glow mic-glow" cx="184" cy="112" r="10" opacity="0"/>
+  <g class="draw">
+    <path class="k solid" pathLength="1" d="M28 92H232V100H28Z"/>
+    <path class="k solid" pathLength="1" d="M69 92a7 7 0 0 1 14 0Z"/>
+    <path class="k solid" pathLength="1" d="M177 92a7 7 0 0 1 14 0Z"/>
+    <path class="k solid" pathLength="1" d="M73.5 100V108H78.5V100M181.5 100V108H186.5V100"/>
+    <path class="k solid" pathLength="1" d="M70 108H82V116H70ZM178 108H190V116H178Z"/>
+  </g>
+  <g class="hand fade" style="--d:.1s">{% include art/hand.html fade=true %}</g>
+  <g class="fade" style="--d:.5s">
+    <rect class="monitor" x="28" y="126" width="204" height="70" rx="7"/>
+    <text class="label" x="37" y="137">PRESSURE</text>
+    <text class="label" x="37" y="167">VIBRATION</text>
+    <path class="baseline" d="M37 159H223M37 183H223"/>
+    <path class="trace trace-p" d=""/>
+    <path class="trace trace-acc trace-v" d=""/>
+    <path class="cursor" d=""/>
+  </g>
+</svg>

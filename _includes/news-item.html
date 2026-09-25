@@ -1,0 +1,4 @@
+<li>
+        <time datetime="{{ include.item.date | date: '%Y-%m-%d' }}">{{ include.item.date | date: '%Y.%m' }}</time>
+        <span>{{ include.item.text | markdownify | remove: '<p>' | remove: '</p>' | strip }}</span>
+      </li>

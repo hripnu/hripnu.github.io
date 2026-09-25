@@ -1,0 +1,53 @@
+<svg class="art" viewBox="0 0 260 200" data-anim="title" aria-hidden="true" focusable="false">
+  <g class="robot">
+    <g mask="url(#mask-edge-r)">
+      <g class="draw">
+        <path class="k solid" pathLength="1" d="M272 82H236V104H272"/>
+        <path class="sheen" pathLength="1" d="M244 88H270"/>
+      </g>
+    </g>
+    <g class="draw">
+      <path class="k solid" pathLength="1" d="M189.5 105.9L176.5 116.9A5.4 5.4 0 0 0 183.5 125.1L196.5 114.1A5.4 5.4 0 0 0 189.5 105.9Z"/>
+      <path class="k solid" pathLength="1" d="M189 78.9L170 81.9A6.2 6.2 0 0 0 172 94.1L191 91.1A6.2 6.2 0 0 0 189 78.9Z"/>
+      <path class="k solid" pathLength="1" d="M170 82.3L155 84.8A5.8 5.8 0 0 0 157 96.2L172 93.7A5.8 5.8 0 0 0 170 82.3Z"/>
+      <path class="k solid" pathLength="1" d="M155.1 85.3L145.5 86.9A5.3 5.3 0 0 0 147.3 97.3L156.9 95.7A5.3 5.3 0 0 0 155.1 85.3Z"/>
+    </g>
+    <g class="fade" style="--d:.4s">
+      <path class="sleeve tip-pad" d="M149.3 86.1L145.5 86.7A5.5 5.5 0 0 0 147.3 97.5L151.1 96.9A5.5 5.5 0 0 0 149.3 86.1Z"/>
+      <circle class="taxel tip-taxel" cx="146.4" cy="92.3" r="1.3"/>
+    </g>
+    <g class="draw">
+      <path class="k solid" pathLength="1" d="M165.8 88a5.2 5.2 0 1 0 10.4 0a5.2 5.2 0 1 0 -10.4 0M151.3 90.5a4.7 4.7 0 1 0 9.4 0a4.7 4.7 0 1 0 -9.4 0M188 110a5 5 0 1 0 10 0a5 5 0 1 0 -10 0"/>
+      <path class="k cap" pathLength="1" d="M168.4 88a2.6 2.6 0 1 0 5.2 0a2.6 2.6 0 1 0 -5.2 0M153.7 90.5a2.3 2.3 0 1 0 4.6 0a2.3 2.3 0 1 0 -4.6 0M190.5 110a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0 -5 0"/>
+      <path class="k solid" pathLength="1" d="M194 70H216Q224 70 224 78V108Q224 116 216 116H194Q186 116 186 108V78Q186 70 194 70Z"/>
+    </g>
+    <g class="fade" style="--d:.4s">
+      <path class="sleeve" d="M196 75H214Q219 75 219 80V106Q219 111 214 111H196Q191 111 191 106V80Q191 75 196 75Z"/>
+      <g class="taxels">
+        {%- for r in (0..2) %}{% for c in (0..2) %}
+        <circle class="taxel palm-taxel" cx="{{ c | times: 7 | plus: 198 }}" cy="{{ r | times: 10 | plus: 83 }}" r="1.3"/>
+        {%- endfor %}{% endfor %}
+      </g>
+    </g>
+    <g class="draw">
+      <path class="k solid" pathLength="1" d="M221 93a13 13 0 1 0 26 0a13 13 0 1 0 -26 0"/>
+      <path class="k cap" pathLength="1" d="M227 93a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"/>
+    </g>
+    <circle class="glow led-glow" cx="234" cy="93" r="8" opacity="0"/>
+    <circle class="led" cx="234" cy="93" r="2.8"/>
+  </g>
+  <g class="rings">
+    <circle class="a ring" cx="128" cy="92" r="0" opacity="0"/>
+    <circle class="a ring" cx="128" cy="92" r="0" opacity="0"/>
+    <circle class="a ring" cx="128" cy="92" r="0" opacity="0"/>
+  </g>
+  <g class="hand fade" style="--d:.1s">{% include art/hand.html band=true fade=true %}</g>
+  <g class="fade" style="--d:.6s">
+    <path class="leader" d=""/>
+    <path class="leader" d=""/>
+    <path class="leader" d=""/>
+    <text class="label tag-l" x="44" y="186" text-anchor="middle">BIO-SIGNAL</text>
+    <text class="label tag-l" x="136" y="186" text-anchor="middle">PHYSICAL HRI</text>
+    <text class="label tag-l" x="214" y="186" text-anchor="middle">ROBOTIC SKIN</text>
+  </g>
+</svg>

@@ -1,0 +1,34 @@
+<svg class="art" viewBox="0 0 260 200" data-anim="biosignal" aria-hidden="true" focusable="false">
+  <g mask="url(#mask-left)">
+    <g class="hand fade" style="--d:.1s; --hs:.6" transform="translate(122 76) scale(.6)">{% include art/hand.html %}</g>
+    <g class="fade" style="--d:.3s">
+      <rect class="patch" x="50" y="70" width="60" height="16" rx="4"/>
+      <g class="electrodes">
+        {%- for r in (0..1) %}{% for c in (0..5) %}
+        <circle class="electrode" cx="{{ c | times: 9.4 | plus: 56.5 }}" cy="{{ r | times: 5.6 | plus: 75.2 }}" r="1.8"/>
+        {%- endfor %}{% endfor %}
+      </g>
+    </g>
+  </g>
+  <g class="ghost-hand" transform="translate(122 76) scale(.6)" opacity="0">
+    <path class="ghost h-ghost"/>
+    <path class="ghost h-ghost"/>
+  </g>
+  <g class="draw">
+    <path class="k thin" pathLength="1" d="M80 86C80 104 72 112 72 128"/>
+  </g>
+  <g class="fade" style="--d:.5s">
+    <rect class="monitor" x="20" y="128" width="220" height="68" rx="7"/>
+    <text class="label" x="29" y="139">EMG</text>
+    <text class="label" x="29" y="151">THRESHOLD</text>
+    <path class="threshold" d="M29 154H231"/>
+    <path class="baseline" d="M29 168H231"/>
+    <path class="trace trace-emg" d=""/>
+    <g class="detect" opacity="0">
+      <path class="detect-line" d=""/>
+      <circle class="af detect-dot" cx="0" cy="0" r="2.4"/>
+      <text class="label label-acc detect-label" x="0" y="139">INTENTION DETECTED</text>
+    </g>
+    <path class="cursor" d=""/>
+  </g>
+</svg>

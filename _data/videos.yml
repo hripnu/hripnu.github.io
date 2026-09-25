@@ -1,0 +1,24 @@
+# Videos, newest first. `youtube` is the id at the end of the YouTube link
+# (https://youtu.be/THIS_PART). Add `lang: ko` when the title is in Korean.
+
+- youtube: T-SNP4POUMI
+  tag: "T-RO 2025"
+  title: "A Body-Scale Robotic Skin Using Distributed Multimodal Sensing Modules: Design, Evaluation, and Application"
+
+- youtube: O50ccjHX6R8
+  tag: "ICRA 2023"
+  title: "Touch Classification on Robotic Skin using Multimodal Tactile Sensing Modules"
+
+- youtube: VWO0QV0sz0w
+  tag: "Press"
+  title: "촉감인지, 상처회복 가능 로봇피부 기술개발"
+  lang: ko
+  note: "KBS (National broadcaster of Korea), 2022.06.10"
+
+- youtube: duIhxFcW0n4
+  tag: "Sci. Robot. 2022"
+  title: "A Biomimetic Elastomeric Robot Skin using Electrical Impedance and Acoustic Tomography for Tactile Sensing"
+
+- youtube: 0BDhlPUG3mA
+  tag: "ICRA 2021"
+  title: "A Large Area Robotic Skin with Sparsely Embedded Microphones for Human-Robot Tactile Communication"

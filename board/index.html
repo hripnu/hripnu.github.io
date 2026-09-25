@@ -1,0 +1,19 @@
+---
+layout: null
+permalink: /board/
+sitemap: false
+---
+{%- comment -%} /board/ itself has no content: it forwards to the first sub-page, News. {%- endcomment -%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Board | {{ site.title }}</title>
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="{{ '/board/news/' | absolute_url }}">
+  <meta http-equiv="refresh" content="0; url={{ '/board/news/' | relative_url }}">
+</head>
+<body>
+  <p><a href="{{ '/board/news/' | relative_url }}">Go to Board: News</a></p>
+</body>
+</html>

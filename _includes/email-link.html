@@ -1,0 +1,2 @@
+{%- capture email_link -%}<a href="mailto:{{ site.lab.email }}">{{ site.lab.email }}</a>{%- endcapture -%}
+{{- include.text | replace: site.lab.email, email_link -}}

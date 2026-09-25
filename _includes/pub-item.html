@@ -1,0 +1,25 @@
+{%- assign pub = include.pub -%}
+<li class="pub" id="{{ pub.id | downcase }}">
+  <span class="pub-id">{{ pub.id }}</span>
+  <div class="pub-body">
+    <p class="pub-tags">
+      <span class="tag">{{ pub.venue }}{% if pub.details %}, {{ pub.details }}{% endif %}</span>
+      {%- if pub.award %}<span class="tag tag-award">{{ pub.award }}</span>{% endif %}
+    </p>
+    <h3 class="pub-title">
+      {%- if pub.doi -%}
+      <a href="https://doi.org/{{ pub.doi }}">{{ pub.title }}</a>
+      {%- else -%}
+      {{ pub.title }}
+      {%- endif -%}
+    </h3>
+    <p class="pub-authors">{% include authors.html names=pub.authors %}</p>
+    {%- if pub.note %}<p class="pub-note">{{ pub.note }}</p>{% endif %}
+    {%- if pub.doi or pub.video %}
+    <p class="pub-links">
+      {%- if pub.doi %}<a href="https://doi.org/{{ pub.doi }}">DOI</a>{% endif %}
+      {%- if pub.video %}<a href="https://youtu.be/{{ pub.video }}">Video</a>{% endif %}
+    </p>
+    {%- endif %}
+  </div>
+</li>

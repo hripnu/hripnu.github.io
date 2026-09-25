@@ -1,0 +1,29 @@
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <span class="brand-name">{{ site.title }}</span>
+      <span class="brand-sub">{{ site.lab.university }}</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      {%- for item in site.nav %}
+      {%- if item.sub %}
+      {%- assign in_group = false %}
+      {%- for sub in item.sub %}{% if page.url == sub.url %}{% assign in_group = true %}{% endif %}{% endfor %}
+      <div class="nav-group">
+        <a href="{{ item.url | relative_url }}"{% if in_group %} aria-current="true"{% endif %}>{{ item.title }}<span class="caret" aria-hidden="true"></span></a>
+        <div class="sub-nav">
+          {%- for sub in item.sub %}
+          <a href="{{ sub.url | relative_url }}"{% if page.url == sub.url %} aria-current="page"{% endif %}>{{ sub.title }}</a>
+          {%- endfor %}
+        </div>
+      </div>
+      {%- else %}
+      <a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
+      {%- endif %}
+      {%- endfor %}
+    </nav>
+  </div>
+</header>

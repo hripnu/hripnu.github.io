@@ -1,0 +1,65 @@
+---
+title: Team
+permalink: /team/
+description: "Principal investigator and members of the Human-Robot Interaction Lab (HRI Lab), Pusan National University."
+---
+{% include page-head.html %}
+{%- assign team = site.data.team -%}
+{%- assign pi = team.pi -%}
+<section class="section section-first">
+  <div class="wrap">
+    <article class="pi">
+      <div class="pi-photo"><img src="{{ pi.photo | relative_url }}" alt="Portrait of {{ pi.name }}" width="480" height="650"></div>
+      <div class="pi-body">
+        <h2 class="pi-name">{{ pi.name }} <span lang="ko">({{ pi.name_ko }})</span></h2>
+        <p class="pi-title">{{ pi.title }}</p>
+        <ul class="contact-list">
+          <li><span>Email</span><a href="mailto:{{ pi.email }}">{{ pi.email }}</a></li>
+          <li><span>Tel</span><a href="tel:{{ pi.phone | remove: ' ' | remove: '-' }}">{{ pi.phone }}</a></li>
+        </ul>
+        <h3 class="sub-title">Career</h3>
+        <ol class="timeline">
+          {%- for item in pi.career %}
+          <li>
+            <span class="tl-period">{{ item.period }}</span>
+            <span class="tl-main"><strong>{{ item.role }}</strong><span>{{ item.place | markdownify | remove: '<p>' | remove: '</p>' | strip }}</span></span>
+          </li>
+          {%- endfor %}
+        </ol>
+      </div>
+    </article>
+
+    <h2 class="section-title section-title-spaced">Researchers</h2>
+    <ul class="member-grid">
+      {%- for group in team.members %}
+      {%- for person in group.people %}
+      <li class="member">
+        {%- if person.photo %}
+        <img class="member-photo" src="{{ person.photo | relative_url }}" alt="Photo of {{ person.name }}" loading="lazy">
+        {%- else %}
+        <span class="member-photo member-initial" aria-hidden="true">{{ person.name | slice: 0 }}</span>
+        {%- endif %}
+        <span class="member-name">{{ person.name }}</span>
+        <span class="member-role">{{ group.role }}</span>
+        {%- if person.email %}<a class="member-email" href="mailto:{{ person.email }}">{{ person.email }}</a>{% endif %}
+      </li>
+      {%- endfor %}
+      {%- endfor %}
+      <li class="member member-open">
+        <span class="member-photo member-placeholder" aria-hidden="true"><svg viewBox="0 0 112 112"><circle cx="56" cy="45" r="19"/><path d="M17 114C17 88 34 74 56 74S95 88 95 114"/></svg></span>
+        <span class="member-name">{{ team.open_card.title }}</span>
+        {%- if team.open_card.note %}<span class="member-role">{{ team.open_card.note }}</span>{% endif %}
+        <a class="member-email" href="mailto:{{ site.lab.email }}">{{ site.lab.email }}</a>
+      </li>
+    </ul>
+
+    {%- if team.alumni.size > 0 %}
+    <h3 class="group-title">Alumni</h3>
+    <ul class="alumni-list">
+      {%- for person in team.alumni %}
+      <li><strong>{{ person.name }}</strong>{% if person.note %}<span>{{ person.note }}</span>{% endif %}</li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+  </div>
+</section>

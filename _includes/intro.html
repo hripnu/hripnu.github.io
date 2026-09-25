@@ -1,0 +1,70 @@
+{%- assign home = site.data.home -%}
+{%- assign areas = home.areas -%}
+{%- assign seconds = home.intro_seconds | default: 7 -%}
+<section class="intro" data-intro aria-label="Introduction">
+  <canvas class="intro-canvas" aria-hidden="true"></canvas>
+  <svg class="art-defs" width="0" height="0" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="fade-arm" gradientUnits="userSpaceOnUse" x1="-120" y1="0" x2="-30" y2="0"><stop offset="0" stop-color="#000"/><stop offset="1" stop-color="#fff"/></linearGradient>
+      <mask id="mask-arm" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse" x="-400" y="-400" width="800" height="800"><rect x="-400" y="-400" width="800" height="800" fill="url(#fade-arm)"/></mask>
+      <linearGradient id="fade-edge-l" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="30" y2="0"><stop offset="0" stop-color="#000"/><stop offset="1" stop-color="#fff"/></linearGradient>
+      <mask id="mask-edge-l" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse" x="-10" y="-10" width="280" height="220"><rect x="-10" y="-10" width="280" height="220" fill="url(#fade-edge-l)"/></mask>
+      <linearGradient id="fade-edge-r" gradientUnits="userSpaceOnUse" x1="236" y1="0" x2="262" y2="0"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#000"/></linearGradient>
+      <mask id="mask-edge-r" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse" x="-10" y="-10" width="280" height="220"><rect x="-10" y="-10" width="280" height="220" fill="url(#fade-edge-r)"/></mask>
+      <linearGradient id="fade-left" gradientUnits="userSpaceOnUse" x1="4" y1="0" x2="58" y2="0"><stop offset="0" stop-color="#000"/><stop offset="1" stop-color="#fff"/></linearGradient>
+      <mask id="mask-left" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse" x="-10" y="-10" width="280" height="220"><rect x="-10" y="-10" width="280" height="220" fill="url(#fade-left)"/></mask>
+    </defs>
+  </svg>
+  <div class="wrap intro-inner">
+    <div class="intro-stage">
+      <article class="scene is-active" data-seconds="{{ home.title_seconds | default: seconds }}">
+        <div class="scene-text">
+          <p class="kicker">{{ home.site_name }}</p>
+          <h1 class="scene-title">{% include nowrap.html text=home.welcome %}</h1>
+          <p class="scene-desc">{{ home.subtitle | join: "<br>" }}</p>
+        </div>
+        <div class="scene-art">{% include art/title.html %}</div>
+      </article>
+      {%- for area in areas %}
+      <article class="scene" data-seconds="{{ area.seconds | default: seconds }}">
+        <div class="scene-text">
+          <p class="kicker">Research Area {{ forloop.index | prepend: '0' }}</p>
+          <h2 class="scene-title">{% include nowrap.html text=area.name %}</h2>
+          <p class="scene-desc">{{ area.text | join: "<br>" }}</p>
+          {%- if area.steps %}
+          <ol class="scene-steps{% if area.sequence %} is-sequence{% endif %}" data-steps>
+            {%- for step in area.steps %}
+            <li{% if forloop.first %} class="is-on"{% endif %}><span>{{ step }}</span></li>
+            {%- endfor %}
+          </ol>
+          {%- endif %}
+        </div>
+        <div class="scene-art">{% include art/{{ area.art }}.html %}</div>
+      </article>
+      {%- endfor %}
+      <article class="scene scene-join" data-seconds="{{ seconds }}">
+        <div class="scene-text">
+          <p class="kicker">Join us</p>
+          <h2 class="scene-title">{% include nowrap.html text=home.recruit.headline %}</h2>
+          {%- assign recruit_lines = home.recruit.text | join: "<br>" %}
+          <p class="scene-desc">{% include email-link.html text=recruit_lines %}</p>
+          <p class="scene-actions"><a class="btn btn-primary" href="mailto:{{ site.lab.email }}">Send an email</a></p>
+        </div>
+        <div class="scene-art">{% include art/join.html %}</div>
+      </article>
+    </div>
+    <div class="intro-controls">
+      <button class="intro-toggle" type="button" aria-label="Pause introduction">
+        <svg class="i-pause" viewBox="0 0 16 16" aria-hidden="true"><rect x="3.5" y="2.5" width="3" height="11" rx="1"/><rect x="9.5" y="2.5" width="3" height="11" rx="1"/></svg>
+        <svg class="i-play" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 2.8v10.4a.8.8 0 0 0 1.2.7l8.3-5.2a.8.8 0 0 0 0-1.4L5.7 2.1a.8.8 0 0 0-1.2.7z"/></svg>
+      </button>
+      <ol class="intro-chapters">
+        <li><button type="button" data-go="0"><span class="ch-label">HRI Lab</span><span class="bar"><b></b></span></button></li>
+        {%- for area in areas %}
+        <li><button type="button" data-go="{{ forloop.index }}"><span class="ch-label"><span class="ch-num">{{ forloop.index | prepend: '0' }}</span> {{ area.short }}</span><span class="bar"><b></b></span></button></li>
+        {%- endfor %}
+        <li><button type="button" data-go="{{ areas.size | plus: 1 }}"><span class="ch-label">Join us</span><span class="bar"><b></b></span></button></li>
+      </ol>
+    </div>
+  </div>
+</section>
