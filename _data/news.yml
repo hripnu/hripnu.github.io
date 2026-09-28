@@ -10,7 +10,9 @@
 # text: plain text; **bold**, *italic*, and [links](https://...) also work
 
 # SAMPLE entries (placeholders showing how news looks): edit or delete them.
-- date: 2026-09-01
-  text: "We are looking for highly motivated students! Please send your CV to [mjyang@pusan.ac.kr](mailto:mjyang@pusan.ac.kr)."
-- date: 2026-03-01
-  text: "The HRI Lab opens at the School of Mechanical Engineering, Pusan National University."
+- date: 2026-08-28
+  text: "HRI Lab has been selected for the National Research Foundation of Korea's General Grants (Type A)."
+#- date: 2026-09-01
+#  text: "We are looking for highly motivated students! Please send your CV to [mjyang@pusan.ac.kr](mailto:mjyang@pusan.ac.kr)."
+- date: 2026-03-02
+  text: "HRI Lab opens at the School of Mechanical Engineering, Pusan National University."
