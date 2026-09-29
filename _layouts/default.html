@@ -17,6 +17,9 @@
   </main>
   {% include footer.html %}
   <script src="{{ '/assets/js/site.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+  {% if jekyll.environment == 'production' %}
+  <script data-goatcounter="https://hripnu.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  {% endif %}
   {% for script in page.scripts %}
   <script src="{{ script | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
   {% endfor %}
